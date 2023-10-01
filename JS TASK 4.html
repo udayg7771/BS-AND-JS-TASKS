@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 4</title>
+</head>
+<body>
+    <button onclick="date()">Click Here To Show Show Date</button><br>
+    <p id="result"></p><br>
+    <button onclick="timendate()">Click Here To Show Time</button><br>
+    <p id="result1"></p>
+
+    <script>
+        function date(){
+            const currentDate = new Date();
+            const day = currentDate.getDate();
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const month = monthNames[currentDate.getMonth()];
+            const year = currentDate.getFullYear();
+            const res1 = `${day}/${month}/${year}`;
+            document.getElementById('result').textContent = res1;
+        }
+        function timendate(){
+            const res2 = new Date();
+            document.getElementById('result1').textContent = res2;
+        }
+    </script>
+</body>
+</html>

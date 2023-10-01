@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS TASK 2</title>
+</head>
+<body>
+    <label for="str">Enter a String:</label>
+    <input type="text" id="str">
+    <button onclick="alphorder()">Submit</button>
+    <p>Alphabetical String: <span id="result"></span></p>
+    
+    <script>
+        function alphorder(){
+            var str = document.getElementById('str').value;
+            var arr = str.split('');
+            arr.sort();
+            var sortString = arr.join('');
+            document.getElementById('result').textContent = sortString;
+        }
+    </script>
+</body>
+</html>
